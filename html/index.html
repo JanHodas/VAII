@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Základné rozloženie aplikácie Servisná kniha vozidiel."
+    />
+    <title>Servisná kniha vozidiel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Preskočiť na obsah</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="Servisná kniha, domov">
+          <span class="brand-mark" aria-hidden="true">SK</span>
+          <span>Servisná kniha</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Hlavná navigácia">
+          <a class="nav-link" aria-current="page" href="index.html">
+            <img class="nav-icon" src="assets/icons/vehicle.png" alt="" />
+            Vozidlá
+          </a>
+          <a class="nav-link" href="#tankovania">
+            <img class="nav-icon" src="assets/icons/fuel.png" alt="" />
+            Tankovania
+          </a>
+          <a class="nav-link" href="#katalog">
+            <img class="nav-icon" src="assets/icons/catalog.png" alt="" />
+            Katalóg
+          </a>
+        </nav>
+
+        <div class="account">
+          <span class="role-tag">Zákazník</span>
+          <span class="avatar" aria-hidden="true">PN</span>
+          <span class="account-name">Peter Novák</span>
+          <button class="button button-small" type="button">Odhlásiť sa</button>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <nav class="breadcrumbs" aria-label="Navigácia v umiestnení">
+              <span>Moje vozidlá</span>
+              <span aria-hidden="true">›</span>
+              <span>Prehľad</span>
+            </nav>
+            <h1 id="page-title">Názov stránky</h1>
+            <p class="page-subtitle">
+              Spoločné rozloženie aplikácie Servisná kniha vozidiel
+            </p>
+          </div>
+          <div class="heading-actions">
+            <button class="button" type="button">Sekundárna akcia</button>
+            <button class="button button-primary" type="button">
+              Hlavná akcia
+            </button>
+          </div>
+        </section>
+
+        <section class="layout-placeholder" aria-labelledby="placeholder-title">
+          <div class="placeholder-content">
+            <h2 id="placeholder-title">Priestor pre obsah stránky</h2>
+            <p>
+              Zoznam vozidiel · detail vozidla · tankovania a spotreba · katalóg
+              úkonov
+            </p>
+            <a class="button button-primary" href="detail-vozidla.html"
+              >Otvoriť detail vozidla</a
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>© 2026 Servisná kniha vozidiel · Ján Hodas</span>
+        <span>Rozloženie pre prihláseného zákazníka</span>
+      </footer>
+    </div>
+  </body>
+</html>

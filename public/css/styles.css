@@ -700,6 +700,53 @@ h1 {
   color: var(--muted);
   font-size: 12px;
 }
+.catalog-content {
+  padding: 25px 30px 30px;
+}
+.catalog-count {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.catalog-table td,
+.catalog-table th {
+  padding: 11px 13px;
+}
+.form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.catalog-form {
+  display: grid;
+  gap: 14px;
+  width: min(100%, 540px);
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 5px 20px rgb(25 42 32 / 4%);
+}
+.catalog-form .field-control {
+  height: 42px;
+  font-size: 13px;
+}
+.catalog-form .form-actions {
+  margin-top: 4px;
+}
+.form-errors {
+  padding: 12px 14px;
+  border: 1px solid #e8c7c7;
+  border-radius: 9px;
+  background: #fdf1f1;
+  color: #7d2f2f;
+  font-size: 12px;
+}
+.form-errors ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
 
 @media (max-width: 1120px) {
   .app-shell {
@@ -740,6 +787,9 @@ h1 {
   .records-table td {
     padding-right: 7px;
     padding-left: 7px;
+  }
+  .catalog-content {
+    padding: 22px 20px;
   }
 }
 
@@ -815,6 +865,9 @@ h1 {
   }
   .content-grid {
     grid-template-columns: 1fr;
+    padding: 20px 18px;
+  }
+  .catalog-content {
     padding: 20px 18px;
   }
   .side-column {
@@ -974,6 +1027,17 @@ h1 {
   .records-table td[data-label="Prílohy"],
   .records-table td[data-label="Akcie"] {
     align-self: center;
+  }
+  .catalog-table td[data-label="Názov"] {
+    grid-column: 1 / -1;
+    font-weight: 650;
+  }
+  .catalog-content {
+    padding: 19px 14px;
+  }
+  .catalog-form {
+    width: 100%;
+    padding: 15px;
   }
   .record-title {
     max-width: none;

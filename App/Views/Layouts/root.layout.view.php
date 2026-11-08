@@ -1,6 +1,13 @@
 <?php
 /** @var string $contentHTML */
 /** @var \Framework\Support\LinkGenerator $link */
+
+$navController = strtolower(trim((string)($_GET['c'] ?? 'home')));
+$navAction = strtolower(trim((string)($_GET['a'] ?? 'index')));
+$navCurrent = static function (string $controller, ?string $action = null) use ($navController, $navAction): string {
+    $isCurrent = $navController === $controller && ($action === null || $navAction === $action);
+    return $isCurrent ? ' aria-current="page"' : '';
+};
 ?>
 <!doctype html>
 <html lang="sk">
@@ -21,13 +28,21 @@
             </a>
 
             <nav class="primary-nav" aria-label="Hlavná navigácia">
-                <a class="nav-link" href="<?= $link->url('home.index') ?>">
+                <a class="nav-link" href="<?= $link->url('home.index') ?>"<?= $navCurrent('home', 'index') ?>>
                     <img class="nav-icon" src="<?= $link->asset('assets/icons/vehicle.png') ?>" alt="">
                     Vozidlá
                 </a>
-                <a class="nav-link" href="<?= $link->url('home.detail') ?>">
-                    <img class="nav-icon" src="<?= $link->asset('assets/icons/catalog.png') ?>" alt="">
+                <a class="nav-link" href="<?= $link->url('home.detail') ?>"<?= $navCurrent('home', 'detail') ?>>
+                    <img class="nav-icon" src="<?= $link->asset('assets/icons/vehicle.png') ?>" alt="">
                     Detail vozidla
+                </a>
+                <a class="nav-link" href="<?= $link->url('works.index') ?>"<?= $navCurrent('works') ?>>
+                    <img class="nav-icon" src="<?= $link->asset('assets/icons/catalog.png') ?>" alt="">
+                    Práce
+                </a>
+                <a class="nav-link" href="<?= $link->url('parts.index') ?>"<?= $navCurrent('parts') ?>>
+                    <img class="nav-icon" src="<?= $link->asset('assets/icons/catalog.png') ?>" alt="">
+                    Diely
                 </a>
             </nav>
 
